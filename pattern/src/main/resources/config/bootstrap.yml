@@ -4,7 +4,7 @@ spring:
   profiles:
     active: dev
   application:
-    name: project-management-agent
+    name: cloud
   cloud:
     nacos:
       discovery:
@@ -24,27 +24,5 @@ spring:
         refresh-enabled: true
         #新的配置方式
         shared-configs:
-          - data-id: project-management-agent.yml
+          - data-id: cloud-pattern.yml
             group: ${spring.cloud.nacos.config.group}
-
-management:
-  task:
-    execution:
-      thread-name-prefix: #project.artifactId#-task-
-    scheduling:
-      thread-name-prefix: #project.artifactId#-scheduling-
-
-jhipster:
-  clientApp:
-    name: ${spring.application.name}
-  swagger:
-    default-include-pattern: /rs/.*
-    title: #project.artifactId# API
-    description: #project.artifactId# API documentation
-    version: #project.version#
-    terms-of-service-url:
-    contact-name:
-    contact-url:
-    contact-email:
-    license: unlicensed
-    license-url:

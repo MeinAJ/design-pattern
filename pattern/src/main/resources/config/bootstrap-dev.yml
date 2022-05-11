@@ -9,9 +9,4 @@ spring:
 
 logging:
   level:
-    com.geega.bsc.spa: debug
-
-paas:
-  services:
-    flow:
-      url: http://flow-bsc-dev.cloud-dev.geega.com:80
+    com.geega.cloud: debug

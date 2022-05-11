@@ -17,6 +17,8 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
+ * Swagger配置
+ *
  * @author Jun.An3
  * @date 2022/05/11
  */
@@ -26,7 +28,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableOpenApi
 @Import(BeanValidatorPluginsConfiguration.class)
 @ConditionalOnProperty(value = {"knife4j.enable"}, matchIfMissing = true)
-public class Swagger2Config {
+public class SwaggerConfig {
 
     /**
      * API分组
