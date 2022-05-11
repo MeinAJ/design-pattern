@@ -71,32 +71,27 @@ public class RegexUtils {
      * 1.1.1.1
      * </支持格式>
      */
-    private static final String IPV4_REGEX = "(([1-9][\\d]{0,2})|(0))\\.(([1-9][\\d]{0,2})|(0))\\.(([1-9][\\d]{0,2})|(0))\\.(([1-9][\\d]{0,2})|(0))";
-
-    /**
-     * URL地址正则表达式
-     * <支持格式>
-     * http://www.baidu.com
-     * http://www.baidu.com/
-     * http://www.baidu.com/1
-     * http://www.baidu.com/1/
-     * https://www.baidu.com/
-     * https://www.baidu.com/1/1
-     * </支持格式>
-     */
-    private static final String URL_REGEX = "[Hh][Tt][Tt][Pp][Ss]?://";
+    private static final String IPV4_REGEX = "(([1-9][\\d]{0,2})|(0))(\\.(([1-9][\\d]{0,2})|(0))){3}";
 
     public static void main(String[] args) {
         //验证邮箱
-        boolean isOk = check("xxx@xxx.xxx", EMAIL_REGEX);
-        System.out.println("xxx@xxx.xxx " + isOk);
-        isOk = check("xxx@xxx.xxx.xxx", EMAIL_REGEX);
-        System.out.println("xxx@xxx.xxx.xxx " + isOk);
-        isOk = check("xxx.xxx@xxx.xxx.xxx", EMAIL_REGEX);
-        System.out.println("xxx.xxx@xxx.xxx.xxx " + isOk);
+        System.out.println("验证邮箱");
+        System.out.println(check(EMAIL_REGEX, "xxx.@xxx.xxx"));
+        System.out.println(check(EMAIL_REGEX, "xxx@xxx.xxx"));
+        System.out.println(check(EMAIL_REGEX, "xxx@xxx.xxx.xxx"));
+        System.out.println(check(EMAIL_REGEX, "xxx.xxx@xxx.xxx.xxx"));
+        System.out.println();
         //验证身份证
         //验证手机号
         //验证IP地址
+        System.out.println("验证IP地址");
+        System.out.println(check(IPV4_REGEX, "127.01.0.1"));
+        System.out.println(check(IPV4_REGEX, "127.00.0.1"));
+        System.out.println(check(IPV4_REGEX, "127.0.0.1"));
+        System.out.println(check(IPV4_REGEX, "192.168.0.1"));
+        System.out.println(check(IPV4_REGEX, "192.168.0.0"));
+        System.out.println(check(IPV4_REGEX, "0.0.0.0"));
+        System.out.println(check(IPV4_REGEX, "1.1.1.1"));
         //验证完整URL地址
         //验证邮政编码
     }
@@ -118,7 +113,7 @@ public class RegexUtils {
      * @return 验证成功返回true，验证失败返回false
      */
     public static boolean checkIdCard(String idCard) {
-        return check(idCard, ID_CARD_REGEX);
+        return check(ID_CARD_REGEX, idCard);
     }
 
 
@@ -129,7 +124,7 @@ public class RegexUtils {
      * @return 验证成功返回true，验证失败返回false
      */
     public static boolean checkMobile(String mobile) {
-        return check(mobile, MOBILE_REGEX);
+        return check(MOBILE_REGEX, mobile);
     }
 
     /**
@@ -139,7 +134,7 @@ public class RegexUtils {
      * @return 验证成功返回true，验证失败返回false
      */
     public static boolean checkPhone(String phone) {
-        return check(phone, PHONE_REGEX);
+        return check(PHONE_REGEX, phone);
     }
 
     /**
@@ -149,24 +144,14 @@ public class RegexUtils {
      * @return 验证成功返回true，验证失败返回false
      */
     public static boolean checkIpV4(String ip) {
-        return check(ip, IPV4_REGEX);
-    }
-
-    /**
-     * 验证url地址
-     *
-     * @param url url地址
-     * @return 验证成功返回true，验证失败返回false
-     */
-    public static boolean checkUrl(String url) {
-        return check(url, URL_REGEX);
+        return check(IPV4_REGEX, ip);
     }
 
     /**
      * 通用检查方法
      */
-    public static boolean check(String checkString, String regex) {
-        return Pattern.matches(checkString, regex);
+    public static boolean check(String regex, String checkString) {
+        return Pattern.matches(regex, checkString);
     }
 
 }
