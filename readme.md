@@ -21,7 +21,5 @@ K8s +
 Skywalking + 
 Maven + 
 Git + 
-MybatisPlus + 
-Spring + 
-SpringMVC)微服务方案实践
+MybatisPlus)微服务方案实践
 ```

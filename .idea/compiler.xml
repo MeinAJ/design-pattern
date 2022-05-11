@@ -7,14 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="pattern" />
+        <module name="common-utils" />
         <module name="common" />
         <module name="gateway" />
-      </profile>
-      <profile name="Annotation profile for cloud" enabled="true">
-        <sourceOutputDir name="../../common-utils/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../../common-utils/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="common-utils" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

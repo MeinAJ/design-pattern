@@ -12,7 +12,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-        <!---->
+        <!--Rocketmq相关依赖-->
+        <!--Kafka相关依赖-->
+        <!--Redis相关依赖-->
+        <!--Elasticsearch相关依赖-->
         <!--web相关依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
