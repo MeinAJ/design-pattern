@@ -31,7 +31,7 @@ public class Swagger2Config {
     /**
      * API分组
      */
-    @Bean(value = "indexApi")
+    @Bean(value = "swaggerApiGroup")
     public Docket indexApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("API分组")
