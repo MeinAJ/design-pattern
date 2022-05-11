@@ -206,13 +206,13 @@
         <repository>
             <id>nexus-releases</id>
             <name>releases</name>
-            <url>http://192.168.0.206:8888/nexus/repository/maven-public/</url>
+            <url>http://192.168.0.206:8888/repository/maven-public/</url>
         </repository>
         <!--version带snapshots的,发布到该快照版本仓库-->
         <snapshotRepository>
             <id>nexus-snapshots</id>
             <name>snapshots</name>
-            <url>http://192.168.0.206:8888/nexus/repository/maven-snapshots/</url>
+            <url>http://192.168.0.206:8888/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -221,7 +221,7 @@
         <repository>
             <!--仓库id,不能重复-->
             <id>nexus-releases</id>
-            <url>http://192.168.0.206:8888/nexus/repository/maven-public/</url>
+            <url>http://192.168.0.206:8888/repository/maven-public/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -234,7 +234,7 @@
             <!--仓库id,不能重复-->
             <id>nexus-snapshots</id>
             <!--仓库地址-->
-            <url>http://192.168.0.206:8888/nexus/repository/maven-snapshots/</url>
+            <url>http://192.168.0.206:8888/repository/maven-snapshots/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>

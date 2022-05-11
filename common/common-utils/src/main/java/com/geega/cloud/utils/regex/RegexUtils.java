@@ -94,6 +94,8 @@ public class RegexUtils {
         System.out.println(check(IPV4_REGEX, "1.1.1.1"));
         //验证完整URL地址
         //验证邮政编码
+        System.out.println("其他");
+        System.out.println(check("[0-9.]+",".0"));
     }
 
     /**
