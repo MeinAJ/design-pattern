@@ -1,19 +1,19 @@
-package com.aj.cloud.gateway;
+package com.geega.cloud.pattern;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * 网关启动类
+ * 设计模式启动类
  *
  * @author Jun.An3
  * @date 2022/05/11
  */
 @SpringBootApplication
-public class GatewayApplication {
+public class PatternApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(GatewayApplication.class, args);
+        SpringApplication.run(PatternApplication.class, args);
     }
 
 }
