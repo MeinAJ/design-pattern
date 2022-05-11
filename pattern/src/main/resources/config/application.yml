@@ -147,37 +147,6 @@ info:
   # Comma separated list of profiles that will trigger the ribbon to show
   display-ribbon-on-profiles: 'dev'
 
-jhipster:
-  clientApp:
-    name: ${spring.application.name}
-  # By default CORS is disabled. Uncomment to enable.
-  # By default CORS is disabled. Uncomment to enable.
-  cors:
-    #      allowed-origins: "*" nacos yaml文件中配置
-    allowed-methods: "*"
-    allowed-headers: "*"
-    exposed-headers: "Authorization,Link,X-Total-Count"
-    allow-credentials: true
-    max-age: 1800
-  mail:
-    from: MicroServiceDemo@localhost
-  swagger:
-    default-include-pattern: /rs/.*
-    title: 能力管控平台服务 API
-    description: 能力管控平台服务 API documentation
-    version: 0.0.1
-    terms-of-service-url:
-    contact-name:
-    contact-url:
-    contact-email:
-    license: unlicensed
-    license-url:
-  security:
-    oauth2:
-      audience:
-        - account
-        - api://default
-# application:
 logging:
   level:
     com.alibaba.nacos.client.*: WARN
