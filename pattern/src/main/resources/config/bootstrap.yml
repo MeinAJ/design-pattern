@@ -1,0 +1,50 @@
+server:
+  port: 10002
+spring:
+  profiles:
+    active: dev
+  application:
+    name: project-management-agent
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        #nacos group
+        group: G
+        #cluster-name: cws
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        group: project-management
+        #配置名称，前缀
+        name: ${spring.application.name}
+        #配置类型，后缀
+        file-extension: yml
+        #是否刷新
+        refresh-enabled: true
+        #新的配置方式
+        shared-configs:
+          - data-id: project-management-agent.yml
+            group: ${spring.cloud.nacos.config.group}
+
+management:
+  task:
+    execution:
+      thread-name-prefix: #project.artifactId#-task-
+    scheduling:
+      thread-name-prefix: #project.artifactId#-scheduling-
+
+jhipster:
+  clientApp:
+    name: ${spring.application.name}
+  swagger:
+    default-include-pattern: /rs/.*
+    title: #project.artifactId# API
+    description: #project.artifactId# API documentation
+    version: #project.version#
+    terms-of-service-url:
+    contact-name:
+    contact-url:
+    contact-email:
+    license: unlicensed
+    license-url:

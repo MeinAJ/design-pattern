@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        #nacos server 地址
+        server-addr: http://10.113.75.165:9090
+        #nacos namespace的id
+        namespace: 4804405f-f1b6-4534-8478-53aab1a18253
+
+logging:
+  level:
+    com.geega.bsc.spa: debug
+
+paas:
+  services:
+    flow:
+      url: http://flow-bsc-dev.cloud-dev.geega.com:80

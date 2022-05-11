@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        #nacos server 地址
+        server-addr: http://nacos-cs.middleware-nacos:8848
+        #nacos namespace的id
+        namespace: 4804405f-f1b6-4534-8478-53aab1a18253
