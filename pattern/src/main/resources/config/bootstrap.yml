@@ -15,7 +15,7 @@ spring:
       config:
         server-addr: ${spring.cloud.nacos.discovery.server-addr}
         namespace: ${spring.cloud.nacos.discovery.namespace}
-        group: project-management
+        group: cloud
         #配置名称，前缀
         name: ${spring.application.name}
         #配置类型，后缀
